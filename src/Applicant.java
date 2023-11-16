@@ -86,4 +86,44 @@ public class Applicant {
     public String getMajor() {
         return major;
     }
+
+    public void setMinor(String minor) {
+        this.minor = minor;
+    }
+
+    public String getMinor() {
+        return minor;
+    }
+
+    public void setTransfer(Boolean transfer) {
+        this.transfer = transfer;
+    }
+
+    public Boolean getTransfer() {
+        return transfer;
+    }
+
+    public void setExpGradDate(String expGradDate) {
+        this.expGradDate = expGradDate;
+    }
+
+    public String getExpGradDate() {
+        return expGradDate;
+    }
+
+    public void setAcademicYear(String academicYear) {
+        this.academicYear = academicYear;
+    }
+
+    public String getAcademicYear() {
+        return academicYear;
+    }
+
+    public void setEnrolledUnits(int enrolledUnits) {
+        this.enrolledUnits = enrolledUnits;
+    }
+
+    public int getEnrolledUnits() {
+        return enrolledUnits;
+    }
 }
