@@ -1,0 +1,3 @@
+package Algorithm;
+
+interface IApplicant {}
