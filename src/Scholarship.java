@@ -4,7 +4,7 @@ public class Scholarship {
     private String major;
     private String minor;
     private Boolean transfer;
-    private String expGradDate;
+    private int expGradDate;
     private String academicYear;
     private int enrolledUnits;
     private String gender;
@@ -23,7 +23,7 @@ public class Scholarship {
         major = null;
         minor = null;
         transfer = null;
-        expGradDate = null;
+        expGradDate = -1;
         academicYear = null;
         enrolledUnits = -1;
         gender = null;
@@ -48,7 +48,7 @@ public class Scholarship {
 
     public Boolean getTransfer(){ return this.transfer; }
 
-    public String getExcpectedGradDate(){ return this.expGradDate; }
+    public int getExcpectedGradDate(){ return this.expGradDate; }
 
     public String getAcademicYear(){ return this.academicYear; }
 
@@ -79,7 +79,7 @@ public class Scholarship {
 
     public void setTransfer(Boolean transfer){ this.transfer = transfer; }
 
-    public void setExcpectedGradDate(String expgradDate){ this.expGradDate = expgradDate; }
+    public void setExpectedGradDate(int expgradDate){ this.expGradDate = expgradDate; }
 
     public void setAcademicYear(String academicYear){ this.academicYear = academicYear; }
 
