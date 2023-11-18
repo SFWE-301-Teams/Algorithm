@@ -1,5 +1,4 @@
 public class Scholarship {
-    private String name;
     private String[] qualities;
     private double GPA;
     private String major;
@@ -10,10 +9,15 @@ public class Scholarship {
     private int enrolledUnits;
     private String gender;
     private Boolean citizenship;
+    private String scholarshipName;
+    private int payout;
+    private String deadline;
+    private String customRequiredInfo;
+    private String preferedMajors;
 
     //CONSTRUCTOR
-    Scholarship(){
-        name = null;
+    public Scholarship(){
+        scholarshipName = null;
         qualities = null;
         GPA = -1;
         major = null;
@@ -24,11 +28,15 @@ public class Scholarship {
         enrolledUnits = -1;
         gender = null;
         citizenship = null;
+        payout = -1;
+        deadline = null;
+        customRequiredInfo = null;
+        preferedMajors = null;
     }
 
 
     //ACCESSORS
-    public String getName(){ return this.name; }
+    public String getScholarshipName(){ return this.scholarshipName; }
 
     public String[] getQualities(){ return this.qualities; }
 
@@ -50,8 +58,16 @@ public class Scholarship {
 
     public String getGender(){ return this.gender; }
 
+    public int getPayout(){ return this.payout; }
+    
+    public String getDeadline(){ return this.deadline; }
+
+    public String getCustomRequiredInfo(){ return this.customRequiredInfo; }
+
+    public String getPreferedMajors(){ return this.preferedMajors; }
+
     //MUTATORS
-    public void setName(String name){ this.name = name;}
+    public void setScholarshipName(String name){ this.scholarshipName = name;}
 
     public void setQualities(String[] qualities){ this.qualities = qualities; }
 
@@ -72,4 +88,12 @@ public class Scholarship {
     public void setCitizenship(Boolean citizenship){ this.citizenship = citizenship; }
 
     public void setGender(String gender){ this.gender = gender; }
+
+    public void setPayout(int payout){ this.payout = payout; }
+    
+    public void setDeadline(String deadline){ this.deadline = deadline; }
+
+    public void setCustomRequiredInfo(String customRequiredinfo){ this.customRequiredInfo = customRequiredinfo; }
+
+    public void setPreferedMajors(String preferedMajors){ this.preferedMajors = preferedMajors; }
 }
