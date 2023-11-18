@@ -1,26 +1,31 @@
-public class Applicant {
-    private String name;
-    private Boolean citizenship;
+public class student extends user {
+    private Boolean citizenship; 
     private String gender;
     private String statement;
-    private int studentID;
-    private String email;
-    private String[] interests;
+    private String studentID; 
+    private String[] interests; 
     
-    private double GPA;
-    private String major;
+    private double gpa; 
+    private String major; 
     private String minor;
     private Boolean transfer;
-    private String expGradDate;
+    private String expectedGraduation; 
     private String academicYear;
-    private int enrolledUnits;
+    private int unitsEnrolled; 
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
+    public student() {//This is the default constructor for the student class
+        this.major = "None";
+        this.minor = "None";
+        this.gpa = -1;
+        this.studentID = "None";
+        this.citizenship = false;
+        this.unitsEnrolled = -1;
+        this.expectedGraduation = "None";
+        this.gender = "None";
+        this.statement = "None";
+        this.transfer = false;
+        this.academicYear = "None";
+        
     }
 
     public void setCitizenship(Boolean citizenship) {
@@ -47,20 +52,12 @@ public class Applicant {
         return statement;
     }
 
-    public void setStudentID(int ID) {
+    public void setStudentID(String ID) {
         this.studentID = ID;
     }
 
-    public int getStudentID() {
+    public String getStudentID() {
         return studentID;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public void setInterests(String interest) {
@@ -71,12 +68,12 @@ public class Applicant {
         return interests;
     }
 
-    public void setGPA(double GPA) {
-        this.GPA = GPA;
+    public void setGpa(double GPA) {
+        this.gpa = GPA;
     }
 
-    public double getGPA() {
-        return GPA;
+    public double getGpa() {
+        return gpa;
     }
 
     public void setMajor(String major) {
@@ -103,12 +100,12 @@ public class Applicant {
         return transfer;
     }
 
-    public void setExpGradDate(String expGradDate) {
-        this.expGradDate = expGradDate;
+    public void setExpectedGraduation(String expectedGraduation) {
+        this.expectedGraduation = expectedGraduation;
     }
 
-    public String getExpGradDate() {
-        return expGradDate;
+    public String getExpectedGraduation() {
+        return expectedGraduation;
     }
 
     public void setAcademicYear(String academicYear) {
@@ -119,11 +116,11 @@ public class Applicant {
         return academicYear;
     }
 
-    public void setEnrolledUnits(int enrolledUnits) {
-        this.enrolledUnits = enrolledUnits;
+    public void setUnitsEnrolled(int unitsEnrolled) {
+        this.unitsEnrolled = unitsEnrolled;
     }
 
-    public int getEnrolledUnits() {
-        return enrolledUnits;
+    public int getUnitsEnrolled() {
+        return unitsEnrolled;
     }
 }
