@@ -1,0 +1,25 @@
+true, Male, "Passionate about environmental sustainability and technology", ABC123, ["Environmental Science", "Technology"], 3.5, Environmental Science, None, false, 2024-05-15, junior, 15
+false, Female, "Aspiring software engineer with a love for mathematics", XYZ456, ["Computer Science", "Mathematics"], 3.8, Computer Science, Mathematics, true, 2023-12-20, senior, 18
+true, Male, "Dedicated to social justice and community service", DEF789, ["Sociology", "Community Service"], 3.2, Sociology, None, false, 2025-05-15, freshman, 12
+true, Female, "Passionate about art and technology", GHI012, ["Digital Art", "Technology"], 3.6, Digital Art, None, false, 2024-05-15, sophomore, 14
+false, Male, "Entrepreneurial mindset with interests in business and technology", JKL345, ["Business Administration", "Technology"], 3.7, Business Administration, None, false, 2023-12-20, senior, 15
+true, Female, "Fascinated by the intersection of psychology and technology", MNO678, ["Psychology", "Technology"], 3.4, Psychology, None, true, 2025-05-15, freshman, 13
+true, Male, "Passionate about literature and computer science", PQR901, ["English Literature", "Computer Science"], 3.5, English Literature, None, false, 2024-05-15, sophomore, 14
+false, Female, "Aspiring biologist with a love for nature", STU234, ["Biology", "Nature Conservation"], 3.9, Biology, Nature Conservation, false, 2023-12-20, senior, 16
+true, Male, "Interested in finance and data analytics", VWX567, ["Finance", "Data Analytics"], 3.2, Finance, None, true, 2025-05-15, freshman, 12
+true, Female, "Passionate about social media and marketing", YZA890, ["Marketing", "Social Media"], 3.6, Marketing, None, false, 2024-05-15, sophomore, 15
+false, Male, "Combining interests in physics and computer science", BCD123, ["Physics", "Computer Science"], 3.8, Physics, None, false, 2023-12-20, senior, 16
+true, Male, "Passionate about environmental sustainability and technology", EFG456, ["Environmental Science", "Technology"], 3.3, Environmental Science, None, false, 2024-05-15, junior, 14
+false, Female, "Aspiring software engineer with a love for mathematics", HIJ789, ["Computer Science", "Mathematics"], 3.7, Computer Science, Mathematics, true, 2023-12-20, senior, 17
+true, Male, "Dedicated to social justice and community service", IJK012, ["Sociology", "Community Service"], 3.1, Sociology, None, false, 2025-05-15, freshman, 12
+true, Female, "Passionate about art and technology", KLM345, ["Digital Art", "Technology"], 3.5, Digital Art, None, false, 2024-05-15, sophomore, 14
+false, Male, "Exploring interests in psychology and literature", NOP678, ["Psychology", "Literature"], 3.2, Psychology, None, false, 2024-05-15, sophomore, 13
+true, Female, "Tech enthusiast with a love for coding", QRS901, ["Computer Science", "Coding"], 3.9, Computer Science, None, true, 2023-12-20, senior, 16
+false, Male, "Aspiring historian with a passion for ancient civilizations", TUV234, ["History", "Ancient Civilizations"], 3.6, History, None, true, 2024-05-15, sophomore, 15
+true, Female, "Combining interests in economics and data analysis", VWX567, ["Economics", "Data Analysis"], 3.3, Economics, None, false, 2025-05-15, freshman, 14
+false, Male, "Nature lover with a focus on environmental studies", YZA890, ["Environmental Studies", "Nature Conservation"], 3.8, Environmental Studies, None, false, 2024-05-15, sophomore, 15
+true, Female, "Aspiring entrepreneur with interests in business and marketing", BCD123, ["Business Administration", "Marketing"], 3.2, Business Administration, None, true, 2025-05-15, freshman, 12
+true, Male, "Passionate about literature and creative writing", EFG456, ["English Literature", "Creative Writing"], 3.7, English Literature, Creative Writing, false, 2024-05-15, sophomore, 14
+false, Female, "Fascinated by the intersection of psychology and technology", HIJ789, ["Psychology", "Technology"], 3.1, Psychology, None, false, 2025-05-15, freshman, 12
+false, Male, "Tech enthusiast exploring interests in coding", IJK012, ["Computer Science", "Coding"], 3.5, Computer Science, None, false, 2024-05-15, sophomore, 14
+true, Female, "Aspiring biologist with a love for marine biology", KLM345, ["Biology", "Marine Biology"], 3.4, Biology, Marine Biology, true, 2024-05-15, sophomore, 13

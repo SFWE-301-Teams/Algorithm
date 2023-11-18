@@ -18,7 +18,7 @@ public class Scholarship {
     //CONSTRUCTOR
     public Scholarship(){
         scholarshipName = null;
-        qualities = null;
+        qualities = null; //Let talk about this again
         GPA = -1;
         major = null;
         minor = null;
@@ -79,7 +79,7 @@ public class Scholarship {
 
     public void setTransfer(Boolean transfer){ this.transfer = transfer; }
 
-    public void setExpectedGradDate(int expgradDate){ this.expGradDate = expgradDate; }
+    public void setExcpectedGradDate(int expgradDate){ this.expGradDate = expgradDate; }
 
     public void setAcademicYear(String academicYear){ this.academicYear = academicYear; }
 
