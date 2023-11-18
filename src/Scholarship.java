@@ -79,7 +79,7 @@ public class Scholarship {
 
     public void setTransfer(Boolean transfer){ this.transfer = transfer; }
 
-    public void setExcpectedGradDate(int expgradDate){ this.expGradDate = expgradDate; }
+    public void setExpectedGradDate(int expgradDate){ this.expGradDate = expgradDate; }
 
     public void setAcademicYear(String academicYear){ this.academicYear = academicYear; }
 
