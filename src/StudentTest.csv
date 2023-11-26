@@ -21,6 +21,6 @@ true, Female, Combining interests in economics and data analysis, VWX567, Econom
 false, Male, Nature lover with a focus on environmental studies, YZA890, Environmental Studies / Nature Conservation, 3.8, Environmental Studies, None, false, 2024-05-15, sophomore, 15
 true, Female, Aspiring entrepreneur with interests in business and marketing, BCD127, Business Administration / Marketing, 3.2, Business Administration, None, true, 2025-05-15, freshman, 12
 true, Male, Passionate about literature and creative writing, EFG956, English Literature / Creative Writing, 3.7, English Literature, Creative Writing, false, 2024-05-15, sophomore, 14
-false, Female, Fascinated by the intersection of psychology and technology, HIJ789, Psychology / Technology, 3.1, Psychology, None, false, 2025-05-15, freshman, 12
-false, Male, Tech enthusiast exploring interests in coding, IJK012, Computer Science / Coding, 3.5, Computer Science, None, false, 2024-05-15, sophomore, 14
+false, Male, Fascinated by the intersection of psychology and technology, HIJ789, Psychology / Technology, 3.1, Psychology, None, true, 2025-05-15, freshman, 12
+false, Male, Tech enthusiast exploring interests in coding, IJK012, Computer Science / Coding, 3.5, Computer Science, None, true, 2024-05-15, sophomore, 14
 true, Female, Aspiring biologist with a love for marine biology, KLM345, Biology / Marine Biology, 3.4, Biology, Marine Biology, true, 2024-05-15, sophomore, 13
