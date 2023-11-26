@@ -1,18 +1,21 @@
 package Algorithm;
 
+import java.util.Date;
+
+/**
+ * Interface defining what information the matching engine requires about
+ * an applicant
+ */
 interface IApplicant {
-    String getName();
-    Boolean getCitizenShip();
+    boolean getUSCitizenship();
     String getGender();
     String getStatement();
-    int getStudentID();
-    String getEmail();
     String[] getInterests();
     double getGPA();
-    String getMajor();
-    String getMinor();
-    Boolean getTransfer();
-    String getExpGradDate();
+    String[] getMajors();
+    String[] getMinors();
+    boolean getTransfer();
+    Date getExpGradDate();
     String getAcademicYear();
     int getEntolledUnits();
 }

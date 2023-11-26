@@ -1,15 +1,21 @@
 package Algorithm;
 
+import java.util.Date;
+
+/**
+ * Interface defining what information the matching engine requires about
+ * a scholarship
+ */
 interface IScholarship {
-    String getName();
     String[] getQualities();
     double getGPA();
     String getMajor();
     String getMinor();
-    Boolean getTransfer();
+    boolean getTransfer();
     String getExpGradDate();
     String getAcademicYear();
     int getEnrolledUnits();
     String getGender();
-    Boolean getCitizenship();
+    boolean getUSCitizenship();
+    Date getDeadline();
 }
