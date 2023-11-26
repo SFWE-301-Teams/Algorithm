@@ -1,11 +1,11 @@
-package Algorithm;
+package algorithm;
 
 import java.util.Date;
 
 /**
  * JavaBean including all applicant information required by the matching engine
  */
-public class Applicant extends IApplicant {
+public class Applicant implements IApplicant {
     private boolean USCitizenship;
     private String gender;
     private String statement;
@@ -14,7 +14,7 @@ public class Applicant extends IApplicant {
     private String[] majors;
     private String[] minors;
     private boolean transfer;
-    private String expGradDate;
+    private Date expGradDate;
     private String academicYear;
     private int enrolledUnits;
 
@@ -70,10 +70,10 @@ public class Applicant extends IApplicant {
     public boolean getTransfer() {
         return transfer;
     }
-    public void setExpGradDate(String expGradDate) {
+    public void setExpGradDate(Date expGradDate) {
         this.expGradDate = expGradDate;
     }
-    public String getExpGradDate() {
+    public Date getExpGradDate() {
         return expGradDate;
     }
     public void setAcademicYear(String academicYear) {

@@ -1,4 +1,4 @@
-package Algorithm;
+package algorithm;
 
 import java.util.Date;
 
@@ -17,5 +17,5 @@ interface IApplicant {
     boolean getTransfer();
     Date getExpGradDate();
     String getAcademicYear();
-    int getEntolledUnits();
+    int getEnrolledUnits();
 }

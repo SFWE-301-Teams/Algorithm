@@ -1,11 +1,11 @@
-package Algorithm;
+package algorithm;
 
 import java.util.Date;
 
 /**
  * JavaBean including all scholarship information required by the matching engine
  */
-public class Scholarship extends IScholarship {
+public class Scholarship implements IScholarship {
     private String[] qualities;
     private double GPA;
     private String major;
@@ -81,12 +81,6 @@ public class Scholarship extends IScholarship {
     }
     public boolean getUSCitizenship() {
         return USCitizenship;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
     }
     public void setDeadline(Date deadline) {
         this.deadline = deadline;

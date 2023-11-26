@@ -1,4 +1,4 @@
-package Algorithm;
+package algorithm;
 
 import java.util.Date;
 
@@ -12,7 +12,7 @@ interface IScholarship {
     String getMajor();
     String getMinor();
     boolean getTransfer();
-    String getExpGradDate();
+    Date getExpGradDate();
     String getAcademicYear();
     int getEnrolledUnits();
     String getGender();
