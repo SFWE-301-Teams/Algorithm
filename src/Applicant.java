@@ -67,7 +67,7 @@ public class Applicant {
         // IMPLEMENT
     }
 
-    public String[] getIntegererests() {
+    public String[] getInterests() {
         return Interests;
     }
 
@@ -93,5 +93,37 @@ public class Applicant {
 
     public Boolean getTransfer() {
         return transfer;
+    }
+
+    public String getMinor() {
+        return minor;
+    }
+
+    public void setMinor(String minor) {
+        this.minor = minor;
+    }
+
+    public String getGradDate() {
+        return expGradDate;
+    }
+
+    public void setGradDate(String date) {
+        this.expGradDate = date;
+    }
+
+    public void setYear(String year) {
+        this.academicYear = year;
+    }
+
+    public String getYear() {
+        return academicYear;
+    }
+
+    public Integer getUnits() {
+        return enrolledUnits;
+    }
+
+    public void setUnits(Integer units) {
+        this.enrolledUnits = units;
     }
 }

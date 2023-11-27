@@ -17,6 +17,9 @@ public class MatchingEngine {
         else if (person.getMajor() == null) {
             empty = true;
         }
+        else if (person.getMinor() == null) {
+            empty = true;
+        }
         else if (person.getName() == null) {
             empty = true;
         }
@@ -26,13 +29,19 @@ public class MatchingEngine {
         else if (person.getTransfer() == null) {
             empty = true;
         }
-        else if (person.expGradDate() == null) {
+        else if (person.getGradDate() == null) {
             empty = true;
         }
-        else if (person.getAcademicYear() == null) {
+        else if (person.getYear() == null) {
             empty = true;
         }
-        else if (person.enrolledUnits() == null) {
+        else if (person.getUnits() == null) {
+            empty = true;
+        }
+        else if (person.getGender() == null) {
+            empty = true;
+        }
+        else if (person.getInterests() == null) {
             empty = true;
         }
 
@@ -67,6 +76,24 @@ public class MatchingEngine {
             empty = true;
         }
         else if (scholar.getGender() == null) {
+            empty = true;
+        }
+        else if (scholar.getPayout() == null) {
+            empty = true;
+        }
+        else if (scholar.getDeadline() == null) {
+            empty = true;
+        }
+        else if (scholar.getPreferedMajors() == null) {
+            empty = true;
+        }
+        else if (scholar.getMajor() == null) {
+            empty = true;
+        }
+        else if (scholar.getMinor() == null) {
+            empty = true;
+        }
+        else if (scholar.getAcademicYear() == null) {
             empty = true;
         }
         else if (scholar.getPayout() == null) {
