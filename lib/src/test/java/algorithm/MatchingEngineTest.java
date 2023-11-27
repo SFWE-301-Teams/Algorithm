@@ -4,23 +4,34 @@
 package algorithm;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+
+
+// import org.junit.jupiter.api.MethodSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 
 
 class MatchingEngineTest {
-    private final MatchingEngine engine = new MatchingEngine();
+    private static final int NUM_SCHOLARSHIPS = 44;
+    private static final int NUM_APPLICANTS = 25;
+
     private Scholarship[] scholarships;
     private Applicant[] applicants;
 
     MatchingEngineTest() throws Exception {
-        scholarships = new Scholarship[44];
-        applicants = new Applicant[25];
+        scholarships = new Scholarship[NUM_SCHOLARSHIPS];
+        applicants = new Applicant[NUM_APPLICANTS];
 
         SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
 
@@ -88,31 +99,25 @@ class MatchingEngineTest {
         }
     }
 
-    @Test
-    void testTest() {
-        assertTrue(engine.match(null, null) == null, "Testing the test setup");
+    @ParameterizedTest
+    @CsvFileSource(resources="/expectedMatching.csv", numLinesToSkip=1)
+    void testApplicant(int i, long expected_bitfield) {
+        // Run matching algorithm
+        ArrayList<Scholarship> matches = MatchingEngine.match(applicants[i], scholarships);
+        // C-like int of flags showing which scholarships the matching algorithm spits out
+        // 000010001001 -> the 1st, 4th, and 8th scholarships are matches
+        long bitfield = 0;
 
-        System.out.println("Testing matching");
-        try {
-            File file = new File("../../resources/expectedMatching.csv");
-            Scanner scnr = new Scanner(file);
-            
-            for (int i = 0; i < applicants.length; ++i) {
-                ArrayList<Scholarship> matches = engine.match(applicants[i], scholarships);
-                String temp = scnr.nextLine();
-                String[] expectedMatches = temp.split(",");
-
-                for (int j = 1; j < expectedMatches.length; ++j) {
-                    if (matches.get(j - 1).getScholarshipName() != expectedMatches[j]) {
-                        System.out.println("Applicant: " + applicants[i].getStudentID() + "failed to match with Scholarship: " + expectedMatches[j]);
-                    }
+        // Verifying matches are as expected
+        for (Scholarship match : matches) {
+            for (int j = 0; j < scholarships.length; j++) {
+                if (match == scholarships[j]) {
+                    System.out.println("Found match");
+                    bitfield |= 1 << j;
+                    break;
                 }
             }
-
-            scnr.close();
         }
-        catch (FileNotFoundException excpt) {
-            System.out.println("Expected Matching File Not Found");
-        }
+        assertEquals(bitfield, expected_bitfield);
     }
 }

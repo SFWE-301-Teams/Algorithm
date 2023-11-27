@@ -10,7 +10,7 @@ public class MatchingEngine {
      * @param user           The user to match scholarships with
      * @param scholarships   All of the possible active scholarships that the user could match with
      */
-    public ArrayList<Scholarship> match(IApplicant applicant, IScholarship[] scholarships) {
+    public static <T extends IScholarship> ArrayList<T> match(IApplicant applicant, T[] scholarships) {
         return null;
     }
 
