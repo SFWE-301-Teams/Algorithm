@@ -6,6 +6,7 @@ import java.util.Date;
  * JavaBean including all applicant information required by the matching engine
  */
 public class Applicant implements IApplicant {
+    private String studentID;
     private boolean USCitizenship;
     private String gender;
     private String statement;
@@ -22,6 +23,12 @@ public class Applicant implements IApplicant {
     public Applicant() {}
 
     // Getters/Setters
+    public void setStudentID(String ID) {
+        this.studentID = ID;
+    }
+    public String getStudentID() {
+        return studentID;
+    }
     public void setUSCitizenship(boolean USCitizenship) {
         this.USCitizenship = USCitizenship;
     }
