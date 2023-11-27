@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
@@ -18,18 +19,19 @@ class MatchingEngineTest {
     private Applicant[] applicants;
 
     MatchingEngineTest() throws Exception {
-        scholarships = new Scholarship[50];
-        applicants = new Applicant[5];
+        scholarships = new Scholarship[44];
+        applicants = new Applicant[25];
 
         SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
 
         try {
             File file = new File("../../resources/ScholarshipTest.csv");
             Scanner scnr = new Scanner(file);
+            String tempLine =  scnr.nextLine();
             int i = 0;
 
             while (scnr.hasNextLine()) {
-                String tempLine = scnr.nextLine();
+                tempLine = scnr.nextLine();
                 String[] inputs = tempLine.split(",");
 
                 scholarships[i].setGPA(Double.parseDouble(inputs[1]));
@@ -41,10 +43,13 @@ class MatchingEngineTest {
                 scholarships[i].setEnrolledUnits(Integer.parseInt(inputs[7]));
                 scholarships[i].setGender(inputs[8]);
                 scholarships[i].setUSCitizenship(Boolean.parseBoolean(inputs[9]));
+                scholarships[i].setScholarshipName(inputs[10]);
                 scholarships[i].setDeadline(df.parse(inputs[12]));
 
                 ++i;
             }
+
+            scnr.close();
 
         }
         catch (FileNotFoundException excpt) {
@@ -54,15 +59,17 @@ class MatchingEngineTest {
         try {
             File file = new File("../../resources/StudentTest.csv");
             Scanner scnr = new Scanner(file);
+            String tempLine = scnr.nextLine();
             int i = 0;
 
             while (scnr.hasNextLine()) {
-                String tempLine = scnr.nextLine();
+                tempLine = scnr.nextLine();
                 String[] inputs = tempLine.split(",");
 
                 applicants[i].setUSCitizenship(Boolean.parseBoolean(inputs[0]));
                 applicants[i].setGender(inputs[1]);
                 applicants[i].setStatement(inputs[2]);
+                applicants[i].setStudentID(inputs[3]);
                 applicants[i].setGPA(Double.parseDouble(inputs[5]));
                 applicants[i].setMajors(new String[]{inputs[6]});
                 applicants[i].setMinors(new String[]{inputs[7]});
@@ -73,6 +80,8 @@ class MatchingEngineTest {
 
                 ++i;
             }
+
+            scnr.close();
         }
         catch (FileNotFoundException excpt) {
             System.out.println("Error Student File Not Found");
@@ -82,5 +91,28 @@ class MatchingEngineTest {
     @Test
     void testTest() {
         assertTrue(engine.match(null, null) == null, "Testing the test setup");
+
+        System.out.println("Testing matching");
+        try {
+            File file = new File("../../resources/expectedMatching.csv");
+            Scanner scnr = new Scanner(file);
+            
+            for (int i = 0; i < applicants.length; ++i) {
+                ArrayList<Scholarship> matches = engine.match(applicants[i], scholarships);
+                String temp = scnr.nextLine();
+                String[] expectedMatches = temp.split(",");
+
+                for (int j = 1; j < expectedMatches.length; ++j) {
+                    if (matches.get(j - 1).getScholarshipName() != expectedMatches[j]) {
+                        System.out.println("Applicant: " + applicants[i].getStudentID() + "failed to match with Scholarship: " + expectedMatches[j]);
+                    }
+                }
+            }
+
+            scnr.close();
+        }
+        catch (FileNotFoundException excpt) {
+            System.out.println("Expected Matching File Not Found");
+        }
     }
 }

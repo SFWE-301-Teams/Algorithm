@@ -6,6 +6,7 @@ import java.util.Date;
  * JavaBean including all scholarship information required by the matching engine
  */
 public class Scholarship implements IScholarship {
+    private String scholarshipName;
     private String[] qualities;
     private double GPA;
     private String major;
@@ -22,6 +23,12 @@ public class Scholarship implements IScholarship {
     public Scholarship() {}
 
     // Getters/Setters
+    public void setScholarshipName(String name) {
+        this.scholarshipName = name;
+    }
+    public String getScholarshipName() {
+        return scholarshipName;
+    }
     public void setQualities(String[] qualities) {
         this.qualities = qualities;
     }
