@@ -1,6 +1,7 @@
 package algorithm;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MatchingEngine {
     /**
@@ -19,18 +20,18 @@ public class MatchingEngine {
      * @return           True if applicant is valid
      */
     static boolean validateApplicant(IApplicant applicant) {
-        return !(
-            applicant.getUSCitizenship() == null ||
-            applicant.getGPA() == null ||
-            applicant.getTransfer() == null ||
-            applicant.getStatement() == null ||
-            applicant.getMinors() == null ||
-            applicant.getMajors() == null ||
-            applicant.getInterests() == null ||
-            applicant.getExpGradDate() == null ||
-            applicant.getEnrolledUnits() == null ||
-            applicant.getGender() == null ||
-            applicant.getAcademicYear() == null
+        return (
+            (Objects.nonNull(applicant.getUSCitizenship())) &&
+            (Objects.nonNull(applicant.getGPA())) &&
+            (Objects.nonNull(applicant.getTransfer())) &&
+            (Objects.nonNull(applicant.getStatement())) &&
+            (Objects.nonNull(applicant.getMinors())) &&
+            (Objects.nonNull(applicant.getMajors())) &&
+            (Objects.nonNull(applicant.getInterests())) &&
+            (Objects.nonNull(applicant.getExpGradDate())) &&
+            (Objects.nonNull(applicant.getEnrolledUnits())) &&
+            (Objects.nonNull(applicant.getGender())) &&
+            (Objects.nonNull(applicant.getAcademicYear()))
         );
     }
 }
