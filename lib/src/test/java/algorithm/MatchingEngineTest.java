@@ -19,8 +19,8 @@ class MatchingEngineTest {
     private Applicant[] applicants;
 
     MatchingEngineTest() throws Exception {
-        scholarships = new Scholarship[50];
-        applicants = new Applicant[5];
+        scholarships = new Scholarship[44];
+        applicants = new Applicant[25];
 
         SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
 
