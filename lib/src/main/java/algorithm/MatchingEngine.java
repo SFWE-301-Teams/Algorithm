@@ -31,9 +31,12 @@ public class MatchingEngine {
                 checkExpGradDate(applicant, scholarship) &&
                 checkEnrolledUnits(applicant, scholarship) &&
                 checkGender(applicant, scholarship) &&
-                checkAcademicYear(applicant, scholarship)) {
+                checkAcademicYear(applicant, scholarship)) 
+            {
+                getInterests(applicant, scholarship);
                 matches.add(scholarship);
             }
+
         }
         return matches;
     }
@@ -51,7 +54,7 @@ public class MatchingEngine {
             (Objects.nonNull(applicant.getStatement())) &&
             (Objects.nonNull(applicant.getMinor())) &&
             (Objects.nonNull(applicant.getMajor())) &&
-            // (Objects.nonNull(applicant.getInterests())) &&
+            (Objects.nonNull(applicant.getInterests())) &&
             (Objects.nonNull(applicant.getExpGradDate())) &&
             (Objects.nonNull(applicant.getEnrolledUnits())) &&
             (Objects.nonNull(applicant.getGender())) &&
@@ -76,7 +79,8 @@ public class MatchingEngine {
             (Objects.nonNull(scholarship.getEnrolledUnits())) &&
             (Objects.nonNull(scholarship.getGender())) &&
             (Objects.nonNull(scholarship.getUSCitizenship())) &&
-            (Objects.nonNull(scholarship.getAcademicYear()))
+            (Objects.nonNull(scholarship.getAcademicYear())) &&
+            (Objects.nonNull(scholarship.getInterests()))
         );
     }
 
@@ -110,5 +114,23 @@ public class MatchingEngine {
     static <T extends IScholarship> boolean checkAcademicYear(IApplicant a, T s) {
         if (s.getAcademicYear().equalsIgnoreCase("none")) return true;
         return s.getAcademicYear().equalsIgnoreCase(a.getAcademicYear());
+    }
+    static <T extends IScholarship> Integer getInterests(IApplicant a, T s) {
+        String[] words1 = s.getInterests().split("\\s+");
+        String[] words2 = a.getInterests().split("\\s+");
+
+        int matchCount = 0;
+        for (String word1 : words1) {
+            for (String word2 : words2) {
+                if (word1.equals(word2)) {
+                    matchCount++;
+                    break;
+                }
+            }
+        }
+
+        System.out.println("Number of matching words: " + matchCount);
+
+        return matchCount;
     }
 }
