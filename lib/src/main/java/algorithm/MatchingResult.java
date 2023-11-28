@@ -1,6 +1,6 @@
 package algorithm;
 
-public class MatchingResult<T extends IScholarship> {
+public class MatchingResult<T> {
     public T scholarship;
     public Integer score;
 

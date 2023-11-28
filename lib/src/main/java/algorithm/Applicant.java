@@ -19,6 +19,7 @@ public class Applicant implements IApplicant {
     private Integer enrolledUnits;
     private String email;
     private String studentID;
+    private String studentName;
 
     // Constructor
     public Applicant() {}
@@ -101,5 +102,11 @@ public class Applicant implements IApplicant {
     }
     public String getStudentID() {
         return studentID;
+    }
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+    public String getStudentName() {
+        return studentName;
     }
 }

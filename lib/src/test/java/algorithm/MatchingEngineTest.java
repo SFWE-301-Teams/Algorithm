@@ -119,10 +119,12 @@ class MatchingEngineTest {
 
         // Verifying matches are as expected
         for (MatchingResult<Scholarship> match : matches) {
+            // Printing matches
             System.out.print(match.scholarship.getScholarshipName() + " (" + match.score + "), ");
+            // Finding match index in scholarships
             for (int j = 0; j < scholarships.length; j++) {
                 if (match.scholarship == scholarships[j]) {
-                    // System.out.println(");
+                    // Adding match index to bitfield
                     bitfield |= 1 << j;
                     break;
                 }
