@@ -4,19 +4,19 @@ This is the code for our final project in SFWE 301.
 
 ### Building
 ```
-$ gradle assemble
+$ ./gradlew assemble
 ```
 
 ### Testing
 ```
-$ gradle test
+$ ./gradlew test --rerun-tasks
 ```
 
 ### Generating JAR
 
 JAR file will can then be found at `lib/build/libs/lib.jar`
 ```
-$ gradle jar
+$ ./gradlew jar
 ```
 
 ### Usage
