@@ -6,39 +6,53 @@ import java.util.Date;
  * JavaBean including all scholarship information required by the matching engine
  */
 public class Scholarship implements IScholarship {
-    private String scholarshipName;
-    private String[] qualities;
-    private double GPA;
+    private String name;
+    private String description;
+    private Integer amount;
+    private String interests;
+    private Double GPA;
     private String major;
     private String minor;
-    private boolean transfer;
+    private Boolean transfer;
     private Date expGradDate;
     private String academicYear;
-    private int enrolledUnits;
+    private Integer enrolledUnits;
     private String gender;
-    private boolean USCitizenship;
+    private Boolean USCitizenship;
     private Date deadline;
 
     // Constructor
     public Scholarship() {}
 
-    // Getters/Setters
-    public void setScholarshipName(String name) {
-        this.scholarshipName = name;
+    // Getters/Setter
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getScholarshipName() {
-        return scholarshipName;
+    public String getName() {
+        return name;
     }
-    public void setQualities(String[] qualities) {
-        this.qualities = qualities;
+    public void setDescription(String description) {
+        this.description = description;
     }
-    public String[] getQualities() {
-        return qualities;
+    public String getDescription() {
+        return description;
     }
-    public void setGPA(double GPA) {
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+    public Integer getAmount() {
+        return amount;
+    }
+    public void setInterests(String interests) {
+        this.interests = interests;
+    }
+    public String getInterests() {
+        return interests;
+    }
+    public void setGPA(Double GPA) {
         this.GPA = GPA;
     }
-    public double getGPA() {
+    public Double getGPA() {
         return GPA;
     }
     public void setMajor(String major) {
@@ -53,10 +67,10 @@ public class Scholarship implements IScholarship {
     public String getMinor() {
         return minor;
     }
-    public void setTransfer(boolean transfer) {
+    public void setTransfer(Boolean transfer) {
         this.transfer = transfer;
     }
-    public boolean getTransfer() {
+    public Boolean getTransfer() {
         return transfer;
     }
     public void setExpGradDate(Date expGradDate) {
@@ -71,10 +85,10 @@ public class Scholarship implements IScholarship {
     public String getAcademicYear() {
         return academicYear;
     }
-    public void setEnrolledUnits(int enrolledUnits) {
+    public void setEnrolledUnits(Integer enrolledUnits) {
         this.enrolledUnits = enrolledUnits;
     }
-    public int getEnrolledUnits() {
+    public Integer getEnrolledUnits() {
         return enrolledUnits;
     }
     public void setGender(String gender) {
@@ -83,10 +97,10 @@ public class Scholarship implements IScholarship {
     public String getGender() {
         return gender;
     }
-    public void setUSCitizenship(boolean USCitizenship) {
+    public void setUSCitizenship(Boolean USCitizenship) {
         this.USCitizenship = USCitizenship;
     }
-    public boolean getUSCitizenship() {
+    public Boolean getUSCitizenship() {
         return USCitizenship;
     }
     public void setDeadline(Date deadline) {

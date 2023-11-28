@@ -23,8 +23,8 @@ import java.text.SimpleDateFormat;
 
 
 class MatchingEngineTest {
-    private static final int NUM_SCHOLARSHIPS = 44;
-    private static final int NUM_APPLICANTS = 25;
+    private static final int NUM_SCHOLARSHIPS = 13;
+    private static final int NUM_APPLICANTS = 13;
 
     private Scholarship[] scholarships;
     private Applicant[] applicants;
@@ -33,10 +33,10 @@ class MatchingEngineTest {
         scholarships = new Scholarship[NUM_SCHOLARSHIPS];
         applicants = new Applicant[NUM_APPLICANTS];
 
-        SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
         try {
-            File file = new File("../../resources/ScholarshipTest.csv");
+            File file = new File("/home/jack/projects/school/SFWE 301/Algorithm/lib/src/test/resources/ScholarshipTest.csv");
             Scanner scnr = new Scanner(file);
             String tempLine =  scnr.nextLine();
             int i = 0;
@@ -45,17 +45,21 @@ class MatchingEngineTest {
                 tempLine = scnr.nextLine();
                 String[] inputs = tempLine.split(",");
 
-                scholarships[i].setGPA(Double.parseDouble(inputs[1]));
+                scholarships[i] = new Scholarship();
+                scholarships[i].setName(inputs[0]);
+                scholarships[i].setGPA(Double.valueOf(inputs[1]));
                 scholarships[i].setMajor(inputs[2]);
                 scholarships[i].setMinor(inputs[3]);
                 scholarships[i].setTransfer(Boolean.parseBoolean(inputs[4]));
-                scholarships[i].setExpGradDate(df.parse(inputs[5]));
-                scholarships[i].setAcademicYear(inputs[6]);
-                scholarships[i].setEnrolledUnits(Integer.parseInt(inputs[7]));
-                scholarships[i].setGender(inputs[8]);
-                scholarships[i].setUSCitizenship(Boolean.parseBoolean(inputs[9]));
-                scholarships[i].setScholarshipName(inputs[10]);
+                scholarships[i].setGender(inputs[5]);
+                scholarships[i].setUSCitizenship(Boolean.parseBoolean(inputs[6]));
+                scholarships[i].setAcademicYear(inputs[7]);
+                scholarships[i].setEnrolledUnits(Integer.parseInt(inputs[8]));
+                scholarships[i].setExpGradDate(df.parse(inputs[9]));
+                scholarships[i].setDescription(inputs[10]);
+                scholarships[i].setAmount(Integer.valueOf(inputs[11]));
                 scholarships[i].setDeadline(df.parse(inputs[12]));
+                scholarships[i].setInterests(inputs[13]);
 
                 ++i;
             }
@@ -68,7 +72,7 @@ class MatchingEngineTest {
         }
 
         try {
-            File file = new File("../../resources/StudentTest.csv");
+            File file = new File("/home/jack/projects/school/SFWE 301/Algorithm/lib/src/test/resources/StudentTest.csv");
             Scanner scnr = new Scanner(file);
             String tempLine = scnr.nextLine();
             int i = 0;
@@ -77,17 +81,20 @@ class MatchingEngineTest {
                 tempLine = scnr.nextLine();
                 String[] inputs = tempLine.split(",");
 
-                applicants[i].setUSCitizenship(Boolean.parseBoolean(inputs[0]));
-                applicants[i].setGender(inputs[1]);
-                applicants[i].setStatement(inputs[2]);
-                applicants[i].setStudentID(inputs[3]);
-                applicants[i].setGPA(Double.parseDouble(inputs[5]));
-                applicants[i].setMajors(new String[]{inputs[6]});
-                applicants[i].setMinors(new String[]{inputs[7]});
-                applicants[i].setTransfer(Boolean.parseBoolean(inputs[8]));
+                applicants[i] = new Applicant();
+                applicants[i].setStudentID(inputs[0]);
+                applicants[i].setGPA(Double.parseDouble(inputs[1]));
+                applicants[i].setMajor(inputs[2]);
+                applicants[i].setMinor(inputs[3]);
+                applicants[i].setTransfer(Boolean.parseBoolean(inputs[4]));
+                applicants[i].setGender(inputs[5]);
+                applicants[i].setUSCitizenship(Boolean.parseBoolean(inputs[6]));
+                applicants[i].setAcademicYear(inputs[7]);
+                applicants[i].setEnrolledUnits(Integer.valueOf(inputs[8]));
                 applicants[i].setExpGradDate(df.parse(inputs[9]));
-                applicants[i].setAcademicYear(inputs[10]);
-                applicants[i].setEnrolledUnits(Integer.parseInt(inputs[11]));
+                applicants[i].setStatement(inputs[10]);
+                applicants[i].setInterests(inputs[11]);
+
 
                 ++i;
             }
@@ -112,7 +119,7 @@ class MatchingEngineTest {
         for (Scholarship match : matches) {
             for (int j = 0; j < scholarships.length; j++) {
                 if (match == scholarships[j]) {
-                    System.out.println("Found match");
+                    // System.out.println(");
                     bitfield |= 1 << j;
                     break;
                 }

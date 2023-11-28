@@ -7,15 +7,15 @@ import java.util.Date;
  * an applicant
  */
 interface IApplicant {
-    boolean getUSCitizenship();
+    Boolean getUSCitizenship();
     String getGender();
     String getStatement();
-    String[] getInterests();
-    double getGPA();
-    String[] getMajors();
-    String[] getMinors();
-    boolean getTransfer();
+    String getInterests();
+    Double getGPA();
+    String getMajor();
+    String getMinor();
+    Boolean getTransfer();
     Date getExpGradDate();
     String getAcademicYear();
-    int getEnrolledUnits();
+    Integer getEnrolledUnits();
 }
