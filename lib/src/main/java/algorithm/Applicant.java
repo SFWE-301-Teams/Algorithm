@@ -6,26 +6,28 @@ import java.util.Date;
  * JavaBean including all applicant information required by the matching engine
  */
 public class Applicant implements IApplicant {
-    private boolean USCitizenship;
+    private Boolean USCitizenship;
     private String gender;
     private String statement;
-    private String[] interests;
-    private double GPA;
-    private String[] majors;
-    private String[] minors;
-    private boolean transfer;
+    private String interests;
+    private Double GPA;
+    private String major;
+    private String minor;
+    private Boolean transfer;
     private Date expGradDate;
     private String academicYear;
-    private int enrolledUnits;
+    private Integer enrolledUnits;
+    private String email;
+    private String studentID;
 
     // Constructor
     public Applicant() {}
 
     // Getters/Setters
-    public void setUSCitizenship(boolean USCitizenship) {
+    public void setUSCitizenship(Boolean USCitizenship) {
         this.USCitizenship = USCitizenship;
     }
-    public boolean getUSCitizenship() {
+    public Boolean getUSCitizenship() {
         return USCitizenship;
     }
     public void setGender(String gender) {
@@ -40,34 +42,34 @@ public class Applicant implements IApplicant {
     public String getStatement() {
         return statement;
     }
-    public void setInterests(String[] interests) {
+    public void setInterests(String interests) {
         this.interests = interests;
     }
-    public String[] getInterests() {
+    public String getInterests() {
         return interests;
     }
-    public void setGPA(double GPA) {
+    public void setGPA(Double GPA) {
         this.GPA = GPA;
     }
-    public double getGPA() {
+    public Double getGPA() {
         return GPA;
     }
-    public void setMajors(String[] majors) {
-        this.majors = majors;
+    public void setMajor(String major) {
+        this.major = major;
     }
-    public String[] getMajors() {
-        return majors;
+    public String getMajor() {
+        return major;
     }
-    public void setMinors(String[] minors) {
-        this.minors = minors;
+    public void setMinor(String minor) {
+        this.minor = minor;
     }
-    public String[] getMinors() {
-        return minors;
+    public String getMinor() {
+        return minor;
     }
-    public void setTransfer(boolean transfer) {
+    public void setTransfer(Boolean transfer) {
         this.transfer = transfer;
     }
-    public boolean getTransfer() {
+    public Boolean getTransfer() {
         return transfer;
     }
     public void setExpGradDate(Date expGradDate) {
@@ -82,10 +84,22 @@ public class Applicant implements IApplicant {
     public String getAcademicYear() {
         return academicYear;
     }
-    public void setEnrolledUnits(int enrolledUnits) {
+    public void setEnrolledUnits(Integer enrolledUnits) {
         this.enrolledUnits = enrolledUnits;
     }
-    public int getEnrolledUnits() {
+    public Integer getEnrolledUnits() {
         return enrolledUnits;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
+    }
+    public String getStudentID() {
+        return studentID;
     }
 }

@@ -7,15 +7,15 @@ import java.util.Date;
  * a scholarship
  */
 interface IScholarship {
-    String[] getQualities();
-    double getGPA();
+    String getInterests();
+    Double getGPA();
     String getMajor();
     String getMinor();
-    boolean getTransfer();
+    Boolean getTransfer();
     Date getExpGradDate();
     String getAcademicYear();
-    int getEnrolledUnits();
+    Integer getEnrolledUnits();
     String getGender();
-    boolean getUSCitizenship();
+    Boolean getUSCitizenship();
     Date getDeadline();
 }

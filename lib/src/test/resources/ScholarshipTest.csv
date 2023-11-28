@@ -1,45 +1,14 @@
-Description, GPA, Major, Minor, Transfer, Graduation Date, School Years, Minimum Units, Gender, Citizenship, Name, Amount, Deadline, Custom Required Info, Prefered Majors
-None,1.5, Psychology, None, false,2025, freshman,11, Male, true, Resilience Scholarship,500, 02-15-2024, None, Psychology
-None,1.8, Biology, Chemistry, true,2025, freshman,10, male, true, Academic Improvement Scholarship,800, 02-28-2024, None, Biology
-None,2.2, Computer Science, None, true,2025, freshman,12, None, true, Tech Explorer Scholarship,1200, 03-01-2024, None, Computer Science
-None,2.5, Psychology, None, false,2024, sophomore,12, female, true, Fresh Start Scholarship,1000, 03-15-2024, None, Psychology
-Volunteer work in community and part-time coding projects,2.8, Computer Science, Mathematics, true,2024, sophomore,13, None, true, Code for Change Scholarship,1000, 04-15-2024, None, Computer Science
-Internship at nonprofit organization,3, Sociology, None, false,2023, senior,12, female, true, Social Impact Scholarship,1500, 04-20-2024, None, Sociology
-Volunteer work in community and entrepreneurship,3.2, Business Administration, None, true,2025, freshman,14, male, true, Future Business Leader Scholarship,1800, 03-20-2024, None, Business Administration and Entrepreneurship
-None,3.2, Economics, Mathematics, true,2025, freshman,16, none, true, Economic Excellence Scholarship,1800, 03-20-2024, None, None
-participates in at least 1 club,3.2, Environmental Engineering,None, true,2025, juniors,12, None, True, Eco Scholarship,500, 08-24-2024, None, None
-None,3.2, Marketing, None, false,2023, senior,14, None, true, Marketing Maven Scholarship,1800, 06-01-2024, None, Marketing
-None,3.2, Psychology, Sociology, true,2026, sophomore,12, female, true, Mental Impact Scholarship,1200, 03-01-2024, None, None
-Volunteer work in community and theater,3.2, Psychology, Sociology, true,2025, freshman,14, male, true, Community Arts Scholarship,1200, 04-10-2024, None, Psychology and Performing Arts
-works a part time job,3.25,  None, none, true,2025, juniors,12, None, true, Woker Support Scholarship,1000, 10-30-2024, None, None
-None,3.3, Engineering, None, false,2026, freshman and sophmores,12, None, true, Shay Foundation Scholarship,2000, 02-10-2024, None, Software Engineering / Computer Science Engineering
-None,3.3, Mechanical Engineering, None, true,2024, sophomore,15, None, true, Engineering Visionary Scholarship,2500, 05-01-2024, None, None
-None,3.4, Business Administration, Marketing, false,2026, freshman and sophomores,14, None, true, Business Achiever Scholarship,2500, 07-15-2024, None, Business Administration
-Volunteer work in community and environmental activism,3.4, Environmental Science, None, true,2024, junior,12, None, true, Eco Warrior Scholarship,1000, 04-30-2024, None, Environmental Science and Sociology
-Volunteer work in community,3.4, None, none, true,2024, sophomore,14, female, true, Community Leader Scholarship,800, 04-10-2024, None, None
-Volunteer work in community and public speaking,3.4, Sociology, None, true,2024, sophomore,12, female, true, Social Advocate Scholarship,1200, 04-10-2024, None, Sociology and Communication Studies
-None,3.5, Biology, None, false,2025, freshman,15, male, true, Science Enthusiast Scholarship,1500, 04-15-2024, None, None
-Internship at marketing agency and photography,3.5, Business Administration, None, false,2023, senior,15,None, true, Creative Marketing Scholarship,2500, 07-01-2024, Portfolio, Marketing and Graphic Design
-None,3.5, History, None, false,2026, freshman and sophomores,12, male, true, History Enthusiast Scholarship,1200, 06-01-2024, None, History and Political Science
-Internship at marketing agency and social media management,3.5, Marketing, None, false,2023, senior,14, female, true, Social Media Influencer Scholarship,2000, 07-01-2024, Portfolio, Marketing and Communications
-None,3.5,None, None, true,2025,Sophmore,14,None, false, Standard Scholarship,3000, 02-15-2024, None,None
-None,3.6, Chemistry, None, true,2025, freshman,12, male, true, STEM Pioneer Scholarship,1000, 02-28-2024, None, None
-Part-time coding projects and graphic design,3.6, Computer Science, None, true,2024, sophomore,13, None, true, Code and Design Scholarship,2500, 05-15-2024, GitHub profile, Computer Science and Graphic Design
-Part-time job in environmental organization and hiking,3.6, Environmental Science, None, true,2025, freshman,13, female, true, Environmental Steward Scholarship,1500, 03-10-2024, None, Environmental Science and Conservation Biology
-None,3.6, Nursing, None, true,2025, freshman,14, female, true, Healthcare Hero Scholarship,1200, 02-15-2024, None, None
-participates in at least 1 club,3.7,  None, Electrical Engineering, true,2035, juniors,12, None, True, IEEE Scholarship,500, 08-17-2024, None, Electrical and Computer Engineering
-Part-time job in healthcare and medical research,3.7, Biology, None, true,2024, sophomore,15, None, true, Medical Innovator Scholarship,3500, 06-15-2024, Resume, Biology and Medical Research
-Part-time job in retail,3.7, Business Administration, None, true,2024, sophomore,15, None, true, Retail Excellence Scholarship,2000, 05-10-2024, None, None
-None,3.7, Marketing, None, false,2026, freshman and sophomores,13, None, true, Marketing Excellence Scholarship,2000, 07-15-2024, None, Marketing and Psychology
-Volunteer at animal shelter,3.7, None, none, true,2024, sophomore,13, female, true, Animal Advocate Scholarship,1500, 03-10-2024, None, None
-Volunteer at animal shelter and pet photography,3.7, None, none, true,2024, sophomore,13, female, true, Animal Lover Scholarship,1500, 03-10-2024, None, Zoology and Photography
-Volunteer at animal shelter and veterinary medicine,3.7, None, none, true,2024, sophomore,13, female, true, Future Vet Scholarship,1500, 03-10-2024, None, Veterinary Science and Animal Science
-None,3.8, Computer Science, None, false,2024, senior,18, None, true, Tech Innovator Scholarship,3000, 06-30-2024, None, Data Science
-Part-time coding projects,3.8, Computer Science, None, true,2023, senior,12, None, true, Code Master Scholarship,3500, 06-15-2024, GitHub profile, None
-Part-time coding projects and robotics club,3.8, Computer Science, None, true,2024, sophomore,12, None, true, Innovator Scholarship,3500, 06-15-2024, GitHub profile, Computer Science and Electrical Engineering
-Part-time job in tech startup and video game development,3.8, Computer Science, None, true,2023, senior,12, None, true, Game Developer Scholarship,4000, 06-30-2024, Portfolio, Computer Science and Game Design
-Part-time coding projects and app development,3.8, Computer Science, None, true,2023, senior,12, None, true, App Developer Scholarship,4000, 06-30-2024, GitHub profile, Computer Science and Software Engineering
-None,3.8, None, None, false,2026, freshman and sophomores,13, None, true, Business Scholarship,4000, 07-15-2024, None, None
-Internship at tech company and artificial intelligence,3.9, Computer Science, None, false,2023, senior,15, None, true, AI Innovator Scholarship,3000, 06-30-2024, Resume, Computer Science and Artificial Intelligence
-Part-time job in tech support,3.9, Computer Science, None, false,2023, senior,16, None, true, Tech Savvy Scholarship,3000, 06-30-2024, None, None
-Internship at tech company,3.9, None, none, false,2023, senior,15, None, true, Future Leader Scholarship,5000, 05-20-2024, Resume, Business Administration
+Name,GPA,Major,Minor,Transfer,Gender,Citizenship,School Years,Minimum Units,Graduation Date,Description,Amount,Deadline,Interests
+Engineering Excellence Scholarship,3.5,Mechanical Engineering,Mathematics,true,Male,true,Junior,15,2025-05-15,Supporting excellence in the field of Mechanical Engineering with a focus on Computer Science.,1500,2024-03-01,None
+Engineering Scholarship,3.5,Mechanical Engineering,None,false,Male,false,Junior,13,2025-05-15,Supporting excellence in the field of Mechanical Engineering with a focus on Computer Science.,1500,2024-03-01,None
+Innovator Scholarship for Engineering,3.7,Electrical Engineering,Computer Science,false,Female,false,sophomore,14,2026-05-15,Recognizing innovative minds in the field of Electrical Engineering.,1800,2024-03-15,None
+Innovator Engineering,3.7,Electrical Engineering,None,false,Male,true,sophomore,16,2026-05-15,Recognizing innovative minds in the field of Electrical Engineering.,1800,2024-03-15,None
+Environmental Steward Scholarship,3.4,Chemical Engineering,Data Science,true,None,true,Senior,12,2024-05-15,Encouraging commitment to environmental stewardship with a focus on Data Science.,1000,2024-04-30,None
+Environmental Scholarship,3.4,Chemical Engineering,None,false,None,false,junior,12,2025-05-15,Encouraging commitment to environmental stewardship with a focus on Data Science.,1000,2024-04-30,None
+Innovator Leadership Scholarship,3.6,Civil Engineering,None,false,None,true,freshman,15,2027-05-15,Recognizing innovation in the field of Civil Engineering.,1500,2024-03-20,None
+Innovator Leadership,3.6,Civil Engineering,None,false,None,false,freshman,15,2027-05-15,Recognizing innovation in the field of Civil Engineering.,1500,2024-03-20,None
+AI Innovator Scholarship,3.9,Computer Engineering,Data Science,false,Male,true,sophomore,16,2026-05-20,Recognizing innovation in the field of Artificial Intelligence.,3000,2024-06-30,Computer Science and Artificial Intelligence
+AI Innovator,3.9,Computer Engineering,None,true,Female,false,sophomore,16,2026-05-20,Recognizing innovation in the field of Artificial Intelligence.,3000,2024-06-30,Computer Science and Artificial Intelligence
+General Freshman Scholarship,2.5,None,None,false,None,false,freshman,16,2027-05-20,Recognizing innovation in the field of Artificial Intelligence.,3000,2024-06-30,Computer Science and Artificial Intelligence
+General Sophomore Scholarship,2.5,None,None,false,None,false,sophomore,16,2026-05-20,Recognizing innovation in the field of Artificial Intelligence.,3000,2024-06-30,Computer Science and Artificial Intelligence
+Environmental Steward Scholarship,2.0,Systems Engineering,None,false,None,false,freshman,12,2027-05-15,Encouraging commitment to environmental stewardship with a focus on Data Science.,1000,2024-04-30,None
