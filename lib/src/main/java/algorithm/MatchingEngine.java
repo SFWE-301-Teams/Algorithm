@@ -10,13 +10,14 @@ public class MatchingEngine {
      * @param user           The user to match scholarships with
      * @param scholarships   All of the possible active scholarships that the user could match with
      */
-    public static <T extends IScholarship> ArrayList<T> match(IApplicant applicant, T[] scholarships) {
+    public static <T extends IScholarship> ArrayList<MatchingResult<T>> match(IApplicant applicant, T[] scholarships) {
         if (!validateApplicant(applicant)) {
             System.out.println("Invalid applicant");
             return null;
         }
 
-        ArrayList<T> matches = new ArrayList<>();
+        ArrayList<MatchingResult<T>> matches = new ArrayList<>();
+
 
         for (T scholarship : scholarships) {
             if (!validateScholarship(scholarship)) {
@@ -31,10 +32,9 @@ public class MatchingEngine {
                 checkExpGradDate(applicant, scholarship) &&
                 checkEnrolledUnits(applicant, scholarship) &&
                 checkGender(applicant, scholarship) &&
-                checkAcademicYear(applicant, scholarship)) 
+                checkAcademicYear(applicant, scholarship))
             {
-                getInterests(applicant, scholarship);
-                matches.add(scholarship);
+                matches.add(new MatchingResult(scholarship, calcInterest(applicant, scholarship)));
             }
 
         }
@@ -115,21 +115,19 @@ public class MatchingEngine {
         if (s.getAcademicYear().equalsIgnoreCase("none")) return true;
         return s.getAcademicYear().equalsIgnoreCase(a.getAcademicYear());
     }
-    static <T extends IScholarship> Integer getInterests(IApplicant a, T s) {
+    static <T extends IScholarship> Integer calcInterest(IApplicant a, T s) {
         String[] words1 = s.getInterests().split("\\s+");
         String[] words2 = a.getInterests().split("\\s+");
 
-        int matchCount = 0;
+        Integer matchCount = 0;
         for (String word1 : words1) {
             for (String word2 : words2) {
-                if (word1.equals(word2)) {
+                if (word1.equalsIgnoreCase(word2)) {
                     matchCount++;
                     break;
                 }
             }
         }
-
-        System.out.println("Number of matching words: " + matchCount);
 
         return matchCount;
     }

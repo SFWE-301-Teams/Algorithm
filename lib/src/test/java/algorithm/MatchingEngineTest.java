@@ -46,7 +46,7 @@ class MatchingEngineTest {
                 String[] inputs = tempLine.split(",");
 
                 scholarships[i] = new Scholarship();
-                scholarships[i].setName(inputs[0]);
+                scholarships[i].setScholarshipName(inputs[0]);
                 scholarships[i].setGPA(Double.valueOf(inputs[1]));
                 scholarships[i].setMajor(inputs[2]);
                 scholarships[i].setMinor(inputs[3]);
@@ -110,15 +110,18 @@ class MatchingEngineTest {
     @CsvFileSource(resources="/expectedMatching.csv", numLinesToSkip=1)
     void testApplicant(int i, long expected_bitfield) {
         // Run matching algorithm
-        ArrayList<Scholarship> matches = MatchingEngine.match(applicants[i], scholarships);
+        ArrayList<MatchingResult<Scholarship>> matches = MatchingEngine.match(applicants[i], scholarships);
         // C-like int of flags showing which scholarships the matching algorithm spits out
         // 000010001001 -> the 1st, 4th, and 8th scholarships are matches
         long bitfield = 0;
 
+        System.out.print(applicants[i].getStudentID() + ": ");
+
         // Verifying matches are as expected
-        for (Scholarship match : matches) {
+        for (MatchingResult<Scholarship> match : matches) {
+            System.out.print(match.scholarship.getScholarshipName() + " (" + match.score + "), ");
             for (int j = 0; j < scholarships.length; j++) {
-                if (match == scholarships[j]) {
+                if (match.scholarship == scholarships[j]) {
                     // System.out.println(");
                     bitfield |= 1 << j;
                     break;
