@@ -36,7 +36,7 @@ class MatchingEngineTest {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
         try {
-            File file = new File("/home/jack/projects/school/SFWE 301/Algorithm/lib/src/test/resources/ScholarshipTest.csv");
+            File file = new File(this.getClass().getClassLoader().getResource("ScholarshipTest.csv").toURI());
             Scanner scnr = new Scanner(file);
             String tempLine =  scnr.nextLine();
             int i = 0;
@@ -72,7 +72,7 @@ class MatchingEngineTest {
         }
 
         try {
-            File file = new File("/home/jack/projects/school/SFWE 301/Algorithm/lib/src/test/resources/StudentTest.csv");
+            File file = new File(this.getClass().getClassLoader().getResource("StudentTest.csv").toURI());
             Scanner scnr = new Scanner(file);
             String tempLine = scnr.nextLine();
             int i = 0;
