@@ -10,13 +10,14 @@ public class MatchingEngine {
      * @param user           The user to match scholarships with
      * @param scholarships   All of the possible active scholarships that the user could match with
      */
-    public static <T extends IScholarship> ArrayList<T> match(IApplicant applicant, T[] scholarships) {
+    public static <T extends IScholarship> ArrayList<MatchingResult<T>> match(IApplicant applicant, T[] scholarships) {
         if (!validateApplicant(applicant)) {
             System.out.println("Invalid applicant");
             return null;
         }
 
-        ArrayList<T> matches = new ArrayList<>();
+        ArrayList<MatchingResult<T>> matches = new ArrayList<>();
+
 
         for (T scholarship : scholarships) {
             if (!validateScholarship(scholarship)) {
@@ -31,9 +32,11 @@ public class MatchingEngine {
                 checkExpGradDate(applicant, scholarship) &&
                 checkEnrolledUnits(applicant, scholarship) &&
                 checkGender(applicant, scholarship) &&
-                checkAcademicYear(applicant, scholarship)) {
-                matches.add(scholarship);
+                checkAcademicYear(applicant, scholarship))
+            {
+                matches.add(new MatchingResult(scholarship, calcInterest(applicant, scholarship)));
             }
+
         }
         return matches;
     }
@@ -51,7 +54,7 @@ public class MatchingEngine {
             (Objects.nonNull(applicant.getStatement())) &&
             (Objects.nonNull(applicant.getMinor())) &&
             (Objects.nonNull(applicant.getMajor())) &&
-            // (Objects.nonNull(applicant.getInterests())) &&
+            (Objects.nonNull(applicant.getInterests())) &&
             (Objects.nonNull(applicant.getExpGradDate())) &&
             (Objects.nonNull(applicant.getEnrolledUnits())) &&
             (Objects.nonNull(applicant.getGender())) &&
@@ -76,7 +79,8 @@ public class MatchingEngine {
             (Objects.nonNull(scholarship.getEnrolledUnits())) &&
             (Objects.nonNull(scholarship.getGender())) &&
             (Objects.nonNull(scholarship.getUSCitizenship())) &&
-            (Objects.nonNull(scholarship.getAcademicYear()))
+            (Objects.nonNull(scholarship.getAcademicYear())) &&
+            (Objects.nonNull(scholarship.getInterests()))
         );
     }
 
@@ -110,5 +114,21 @@ public class MatchingEngine {
     static <T extends IScholarship> boolean checkAcademicYear(IApplicant a, T s) {
         if (s.getAcademicYear().equalsIgnoreCase("none")) return true;
         return s.getAcademicYear().equalsIgnoreCase(a.getAcademicYear());
+    }
+    static <T extends IScholarship> Integer calcInterest(IApplicant a, T s) {
+        String[] words1 = s.getInterests().split("\\s+");
+        String[] words2 = a.getInterests().split("\\s+");
+
+        Integer matchCount = 0;
+        for (String word1 : words1) {
+            for (String word2 : words2) {
+                if (word1.equalsIgnoreCase(word2)) {
+                    matchCount++;
+                    break;
+                }
+            }
+        }
+
+        return matchCount;
     }
 }

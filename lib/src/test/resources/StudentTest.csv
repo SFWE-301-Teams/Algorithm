@@ -1,14 +1,14 @@
 StudentID,GPA,Major,Minor,Transfer,Gender,Citizenship,Grade,Enrolled Units,Graduation Date,Statement,Interests
-ENG0010,3.5,Mechanical Engineering,Mathematics,true,Male,true,junior,15,2025-05-15,Passionate about renewable energy and robotics,Mechanical Engineering
-ENG0011,3.6,Mechanical Engineering,None,false,Male,false,junior,15,2025-05-15,Passionate about renewable energy and robotics,Mechanical Engineering
-ENG0020,3.8,Electrical Engineering,Computer Science,true,Female,false,sophomore,14,2026-05-15,Aspiring hardware and software engineer,Electrical Engineering
-ENG0021,3.8,Electrical Engineering,None,true,Male,true,sophomore,16,2026-05-15,Aspiring hardware and software engineer,Electrical Engineering
-ENG0030,3.5,Chemical Engineering,None,true,Male,ture,senior,16,2024-12-20,Environmental advocate with a focus on sustainable processes,Chemical Engineering
-ENG0031,3.5,Chemical Engineering,None,true,Female,false,senior,16,2024-12-20,Environmental advocate with a focus on sustainable processes,Chemical Engineering
-ENG0040,3.7,Civil Engineering,Architecture,false,Male,true,freshman,15,2027-05-15,Passionate about designing sustainable infrastructure,Civil Engineering
-ENG0041,3.7,Civil Engineering,None,false,Female,false,freshman,16,2027-05-15,Passionate about designing sustainable infrastructure,Civil Engineering
-ENG0050,3.9,Computer Engineering,Data Science,true,Male,true,sophomore,16,2026-05-15,Tech enthusiast with a love for data analytics,Computer Engineering
-ENG0051,2.0,Computer Engineering,None,true,Female,false,sophomore,16,2026-05-15,Tech enthusiast with a love for data analytics,Computer Engineering
-ENG0060,3.9,Mining Engineering,Data Science,true,None,true,freshman,16,2027-05-15,Mining enthusiast with a love for Strip,Mining Engineering
-ENG0061,2.7,None,None,true,None,false,sophomore,16,2026-05-15,Mining enthusiast with a love for Pit Mining,Mining Engineering
-ENG0070,2.7,Industrial Engineering,None,true,None,false,freshman,16,2027-05-15,Mining enthusiast with a love for pit mines,Mining Engineering
+ENG0010,3.5,Mechanical Engineering,Mathematics,true,Male,true,junior,15,2025-05-15,Passionate about renewable energy and robotics,SolidWorks Planes
+ENG0011,3.6,Mechanical Engineering,None,false,Male,false,junior,15,2025-05-15,Passionate about renewable energy and robotics,Engines Cars Racing
+ENG0020,3.8,Electrical Engineering,Computer Science,true,Female,false,sophomore,14,2026-05-15,Aspiring hardware and software engineer,Intel Computers Lights Circuits Hardware
+ENG0021,3.8,Electrical Engineering,None,true,Male,true,sophomore,16,2026-05-15,Aspiring hardware and software engineer,Algorithms Math Coding
+ENG0030,3.5,Chemical Engineering,None,true,Male,ture,senior,16,2024-12-20,Environmental advocate with a focus on sustainable processes,Lab Reactions Atoms
+ENG0031,3.5,Chemical Engineering,None,true,Female,false,senior,16,2024-12-20,Environmental advocate with a focus on sustainable processes,Structure
+ENG0040,3.7,Civil Engineering,Architecture,false,Male,true,freshman,15,2027-05-15,Passionate about designing sustainable infrastructure,Architecture Blue Print Art
+ENG0041,3.7,Civil Engineering,None,false,Female,false,freshman,16,2027-05-15,Passionate about designing sustainable infrastructure,None
+ENG0050,3.9,Computer Engineering,Data Science,true,Male,true,sophomore,16,2026-05-15,Tech enthusiast with a love for data analytics,Math Percent Trend Big Data Volunteer
+ENG0051,2.0,Computer Engineering,None,true,Female,false,sophomore,16,2026-05-15,Tech enthusiast with a love for data analytics,Probability Math
+ENG0060,3.9,Mining Engineering,Data Science,true,None,true,freshman,16,2027-05-15,Mining enthusiast with a love for Strip,None
+ENG0061,2.7,None,None,true,None,false,sophomore,16,2026-05-15,Mining enthusiast with a love for Pit Mining,Clubs Minerals Oil Rigs
+ENG0070,2.7,Industrial Engineering,None,true,None,false,freshman,16,2027-05-15,Mining enthusiast with a love for pit mines,None
